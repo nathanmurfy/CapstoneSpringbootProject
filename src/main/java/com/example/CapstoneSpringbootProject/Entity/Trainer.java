@@ -11,6 +11,8 @@ public class Trainer {
 
     private String exercise;
     private int weight;
+    private int reps;
+    private int sets;
 
     public Long getId() {
         return id;
@@ -23,9 +25,11 @@ public class Trainer {
     public Trainer() {
     }
 
-    public Trainer(String exercise, int weight) {
+    public Trainer(String exercise, int weight, int reps, int sets) {
         this.exercise = exercise;
         this.weight = weight;
+        this.reps = reps;
+        this.sets = sets;
     }
 
     public String getExercise() {
@@ -44,4 +48,19 @@ public class Trainer {
         this.weight = weight;
     }
 
+    public int getReps() {
+        return reps;
+    }
+
+    public void setReps(int reps) {
+        this.reps = reps;
+    }
+
+    public int getSets() {
+        return sets;
+    }
+
+    public void setSets(int sets) {
+        this.sets = sets;
+    }
 }
