@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<h1 th:text="${something}"/>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Exercise</th>
+        <th scope="col">Weight</th>
+        <th scope="col">Reps</th>
+        <th scope="col">Sets</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="trainer: ${training}">
+        <td th:text="${trainer.exercise}"></td>
+        <td th:text="${trainer.weight}"></td>
+        <td th:text="${trainer.reps}"></td>
+        <td th:text="${trainer.sets}"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

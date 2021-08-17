@@ -11,13 +11,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+
 @Controller
 public class TrainerController {
 
     @GetMapping
-    String getTrainer(Model model){
+    String getTraining(Model model){
         model.addAttribute("something", "this is from the controller");
-        return "trainer";
+        model.addAttribute("training", Arrays.asList(
+                new Trainer("Bench", 100, 10, 2),
+                new Trainer("Squat", 160, 15, 3),
+                new Trainer("Deadlift", 200, 10, 3)
+        ));
+        return "training";
     }
 
 }
