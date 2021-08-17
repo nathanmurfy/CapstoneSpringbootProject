@@ -23,3 +23,5 @@ The target audience is for anybody who weight trains and wants to take it seriou
 their training and get bigger. Even if you don't train seriously It's nice to know what you are doing and if you are making any
 progression. Tracking progress is a great tool and everybody should use it, it makes all the difference. Young or old, no
 matter what or how you look it's the best thing for anybody.
+
+The HTML page will have a table with past lifts recorded.

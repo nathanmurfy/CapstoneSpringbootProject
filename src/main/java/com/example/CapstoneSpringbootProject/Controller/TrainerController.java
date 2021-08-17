@@ -6,15 +6,14 @@ import com.example.CapstoneSpringbootProject.Service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
 
 @Controller
 public class TrainerController {
+    @Autowired
+    TrainerService trainerService;
 
     @GetMapping
     String getTraining(Model model){
@@ -26,5 +25,11 @@ public class TrainerController {
         ));
         return "training";
     }
+    @PostMapping("/submitExercise")
+    String submitTrainer(@ModelAttribute("trainer")Trainer trainer){
+        trainerService.insertTrainer(trainer);
+        return "training";
+    }
+
 
 }

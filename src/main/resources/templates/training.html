@@ -14,14 +14,21 @@
         <th scope="col">Weight</th>
         <th scope="col">Reps</th>
         <th scope="col">Sets</th>
+        <th scope="col">Action</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="trainer: ${training}">
+        <form th:action="@{/submitExercise}" th:object="${trainer}" method="post">
+            <input type="hidden" th:value="*{exercise}" name="exercise">
+            <input type="hidden" th:value="*{reps}" name="reps">
+            <input type="hidden" th:value="*{sets}" name="sets">
         <td th:text="${trainer.exercise}"></td>
-        <td th:text="${trainer.weight}"></td>
+        <td><input type="text" th:value="*{weight}" name="weight"></td>
         <td th:text="${trainer.reps}"></td>
         <td th:text="${trainer.sets}"></td>
+            <td><button type="submit">Save</button></td>
+        </form>
     </tr>
     </tbody>
 </table>
