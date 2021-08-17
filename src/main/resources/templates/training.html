@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
 </head>
 <body>
 <h1 th:text="${something}"/>
@@ -20,19 +21,25 @@
     <tbody>
     <tr th:each="trainer: ${training}">
         <form th:action="@{/submitExercise}" th:object="${trainer}" method="post">
-            <input type="hidden" th:value="*{exercise}" name="exercise">
-            <input type="hidden" th:value="*{reps}" name="reps">
-            <input type="hidden" th:value="*{sets}" name="sets">
-        <td th:text="${trainer.exercise}"></td>
-        <td><input type="text" th:value="*{weight}" name="weight"></td>
-        <td th:text="${trainer.reps}"></td>
-        <td th:text="${trainer.sets}"></td>
+            <input type="hidden" th:value="*{id}" name="id">
+            <td><input type="text" th:value="*{exercise}" name="exercise"></td>
+            <td><input type="text" th:value="*{weight}" name="weight"></td>
+            <td><input type="text" th:value="*{reps}" name="reps"></td>
+            <td><input type="text" th:value="*{sets}" name="sets"></td>
+            <td><button type="submit">Save</button></td>
+        </form>
+    </tr>
+    <tr>
+        <form th:action="@{/submitExercise}" th:object="${trainer}" method="post">
+            <input type="hidden"  name="id">
+            <td><input type="text" value="Insert new one here" name="exercise"></td>
+            <td><input type="text" name="weight"></td>
+            <td><input type="text" name="reps"></td>
+            <td><input type="text"  name="sets"></td>
             <td><button type="submit">Save</button></td>
         </form>
     </tr>
     </tbody>
 </table>
-
-
 </body>
 </html>

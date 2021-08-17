@@ -2,32 +2,41 @@ package com.example.CapstoneSpringbootProject.Controller;
 
 
 import com.example.CapstoneSpringbootProject.Entity.Trainer;
+import com.example.CapstoneSpringbootProject.Repository.TrainerRepository;
 import com.example.CapstoneSpringbootProject.Service.TrainerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 @Controller
 public class TrainerController {
     @Autowired
     TrainerService trainerService;
 
+    @Autowired
+    TrainerRepository trainerRepository;
+
     @GetMapping
     String getTraining(Model model){
-        model.addAttribute("something", "this is from the controller");
-        model.addAttribute("training", Arrays.asList(
-                new Trainer("Bench", 100, 10, 2),
-                new Trainer("Squat", 160, 15, 3),
-                new Trainer("Deadlift", 200, 10, 3)
-        ));
+        Iterable<Trainer> trainers=trainerRepository.findAll();
+
+        model.addAttribute("something", "Workout Tracker");
+        model.addAttribute("training", trainers);
+//        model.addAttribute("training", Arrays.asList(
+//                new Trainer("NEW", 100, 10, 2)
+//        ));
         return "training";
     }
     @PostMapping("/submitExercise")
-    String submitTrainer(@ModelAttribute("trainer")Trainer trainer){
+    String submitTrainer(@ModelAttribute("trainer") Trainer trainer,Model model){
         trainerService.insertTrainer(trainer);
+        Iterable<Trainer> trainers=trainerRepository.findAll();
+        model.addAttribute("training", trainers);
         return "training";
     }
 
