@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
+    <style>
+    </style>
 </head>
 <body>
-<h1 th:text="${something}"/>
+<h1 style="color:darkred" th:text="${something}"/>
 <table class="table table-dark">
     <thead>
     <tr>
@@ -32,10 +33,10 @@
     <tr>
         <form th:action="@{/submitExercise}" th:object="${trainer}" method="post">
             <input type="hidden"  name="id">
-            <td><input type="text" value="Insert new one here" name="exercise"></td>
-            <td><input type="text" name="weight"></td>
-            <td><input type="text" name="reps"></td>
-            <td><input type="text"  name="sets"></td>
+            <td><input type="text" value="Insert Exercise" name="exercise"></td>
+            <td><input type="text" value="Insert weight" name="weight"></td>
+            <td><input type="text" value="Insert Reps" name="reps"></td>
+            <td><input type="text" value="Insert Sets" name="sets"></td>
             <td><button type="submit">Save</button></td>
         </form>
     </tr>
