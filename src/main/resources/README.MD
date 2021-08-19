@@ -24,4 +24,12 @@ their training and get bigger. Even if you don't train seriously It's nice to kn
 progression. Tracking progress is a great tool and everybody should use it, it makes all the difference. Young or old, no
 matter what or how you look it's the best thing for anybody.
 
-The HTML page will have a table with past lifts recorded.
+The HTML page will have a table with past lifts recorded. I've made the website to be easy to understand, and very accessible.
+For the users ive also linked a website which shows a few recommend exercises that the user can try if they are new  to weight
+lifting and wish to expand their workout regime. I wanted to make a second webpage to show my own but i am not sure how to do
+that yet and will keep trying.
+
+Now when a user saves their workout it will get stored on the webpage, and the h2 database. This works for ease of
+access when given two option to see their past workouts on. One thing I was keeping in mind is sometimes there is weight
+and rep fluctuation in between a certain exercise. I felt it would be easiest for the user to just enter in how many reps
+they did with a certain weight and change when ever they need, so they are not stuck with a certain weight or rep range.
