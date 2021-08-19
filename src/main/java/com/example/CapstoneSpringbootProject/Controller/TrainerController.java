@@ -33,6 +33,10 @@ public class TrainerController {
         model.addAttribute("training", trainers);
         return "index";
     }
+    @RequestMapping("/exercises")
+    public String exercises() {
+        return "exercises";
+    }
 
 
 }
