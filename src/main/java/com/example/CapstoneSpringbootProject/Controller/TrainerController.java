@@ -9,10 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 @Controller
 public class TrainerController {
     @Autowired
@@ -27,17 +23,15 @@ public class TrainerController {
 
         model.addAttribute("something", "Workout Tracker");
         model.addAttribute("training", trainers);
-//        model.addAttribute("training", Arrays.asList(
-//                new Trainer("NEW", 100, 10, 2)
-//        ));
-        return "training";
+
+        return "index";
     }
     @PostMapping("/submitExercise")
     String submitTrainer(@ModelAttribute("trainer") Trainer trainer,Model model){
         trainerService.insertTrainer(trainer);
         Iterable<Trainer> trainers=trainerRepository.findAll();
         model.addAttribute("training", trainers);
-        return "training";
+        return "index";
     }
 
 
