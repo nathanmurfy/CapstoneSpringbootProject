@@ -24,6 +24,20 @@ their training and get bigger. Even if you don't train seriously It's nice to kn
 progression. Tracking progress is a great tool and everybody should use it, it makes all the difference. Young or old, no
 matter what or how you look it's the best thing for anybody.
 
+A few things I require for my project would be to take users input and store it into h2. This would be holding the users lifts that 
+they input into the web page adn then gets stored. I require to use a spring boot project with maven and html and css. These two will
+come together in the end for the final project. This will make a complete spring boot and thymeleaf project. I will need a controller, entity,
+and repository. Also, I will try and make two html files. Will start with one and then try and incorporate the second.
+
+List of features -
+.Specific page for recommend exercises. This allows the user to be able to explore new exercises or great for people just
+starting to work out. This gives the user variety.
+
+.Progress tracking. This is the main feature of the application. All progress can be tracked here on the web page itself.
+
+.The h2 database. All entered progress in the web page gets stored here so no matter what happens to the web page h2 will have
+all of your progress saved.
+
 The HTML page will have a table with past lifts recorded. I've made the website to be easy to understand, and very accessible.
 For the users ive also linked a website which shows a few recommend exercises that the user can try if they are new  to weight
 lifting and wish to expand their workout regime. I wanted to make a second webpage to show my own but i am not sure how to do
