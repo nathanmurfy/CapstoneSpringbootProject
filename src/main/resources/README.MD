@@ -33,3 +33,7 @@ Now when a user saves their workout it will get stored on the webpage, and the h
 access when given two option to see their past workouts on. One thing I was keeping in mind is sometimes there is weight
 and rep fluctuation in between a certain exercise. I felt it would be easiest for the user to just enter in how many reps
 they did with a certain weight and change when ever they need, so they are not stuck with a certain weight or rep range.
+
+I have made the second web page with suggested exercises. I have two categories. One is compound movements and the other is accessories.
+You can get a good workout just doing these movements but i am thinking of adding a few more. This way it gives the user more variety.
+
