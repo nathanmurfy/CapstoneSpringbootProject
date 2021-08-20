@@ -38,5 +38,10 @@ public class TrainerController {
         return "exercises";
     }
 
+    @RequestMapping("/index")
+    public String index() {
+        return "index";
+    }
+
 
 }

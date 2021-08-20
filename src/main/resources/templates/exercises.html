@@ -3,34 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Suggested exercises for each muscle group</title>
-    <style></style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style th:inline="text">
+        body {
+            margin-top: 13%;
+            background: url('https://www.muscleandfitness.com/wp-content/uploads/2019/03/ronnie-coleman-squat-11090.jpg?w=940&h=529&crop=1&quality=86&strip=all') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            -o-background-size: cover;
+        }
+        h1 {
+            margin-left: 23%;
+            color: cornflowerblue;
+        }
+        p {
+            margin-left: 39%;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col">Bench Press</div>
-        <div class="col">Squat</div>
-        <div class="w-100"></div>
-        <div class="col">Deadlift</div>
-        <div class="col">Chest Press</div>
-        <div class="container">
-            <div class="row">
-                <div class="col">Incline Dumbbell Press</div>
-                <div class="col">Tricep Pushdown</div>
-                <div class="w-100"></div>
-                <div class="col">Lateral Shoulder Raise</div>
-                <div class="col">Military Press</div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col">Lat Pull Down</div>
-                        <div class="col">Leg Press</div>
-                        <div class="w-100"></div>
-                        <div class="col">Skull Crusher</div>
-                        <div class="col">Barbell Rows</div>
-                    </div>
-                </div>
-                </div>
-                </div>
-            </div>
-        </div>
+<div class="jumbotron p-1 p-md-1 rounded" style="background-image: url('../static/arnold_workout_-_1200x630.png'); background-size: cover;">
+<table class="table table-dark">
+    <thead>
+    <h1>Suggested Exercises for muscle growth</h1>
+    <tr>
+        <th scope="col"></th>
+        <th scope="col">Compound Movement</th>
+        <th scope="col">Accessory Movement</th>
+        <th scope="col">Accessory Movement</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">Chest</th>
+        <td>Bench Press</td>
+        <td>Incline Dumbbell Press</td>
+        <td>Pec Fly</td>
+    </tr>
+    <tr>
+        <th scope="row">Legs</th>
+        <td>Squat</td>
+        <td>Leg Press</td>
+        <td>Leg Extension</td>
+    </tr>
+    <tr>
+        <th scope="row">Back</th>
+        <td>Barbell Rows</td>
+        <td>Lat Pull Down</td>
+        <td>Cable Rows</td>
+
+    </tr>
+    <tr>
+        <th scope="row">Arms</th>
+        <td>Close Grip Bench Press</td>
+        <td>Skull Crushers</td>
+        <td>Strict Curls</td>
+
+    </tr>
+    </tbody>
+</table>
+    <p>
+    Go back to the Workout Tracker <a th:href="@{index}">here!</a>
+    </p>
+</div>
 </body>
