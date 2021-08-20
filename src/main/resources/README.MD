@@ -1,4 +1,3 @@
-For my Spring application I want to use what i made in the java app and store the information using a database.
 
 What will the microservice do?
 My microservice will take the users input about their training sessions and hold their information in a database. The
@@ -32,6 +31,8 @@ and repository. Also, I will try and make two html files. Will start with one an
 List of features -
 .Specific page for recommend exercises. This allows the user to be able to explore new exercises or great for people just
 starting to work out. This gives the user variety.
+
+.A hyperlink between pages. This provides ease of use to the user so they can easily switch back and forth between web pages.
 
 .Progress tracking. This is the main feature of the application. All progress can be tracked here on the web page itself.
 

@@ -17,7 +17,7 @@ public class TrainerController {
     @Autowired
     TrainerRepository trainerRepository;
 
-    @GetMapping
+    @GetMapping("/")
     String getTraining(Model model){
         Iterable<Trainer> trainers=trainerRepository.findAll();
 
